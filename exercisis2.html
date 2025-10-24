@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercisis2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384
+    -EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="text/javascript" src="funcions.js"></script>
+</head>
+<body>
+
+<div>
+<h1 id="campNom">Nom:-</h1>
+<h2 id="campPunts">Punts:-</h2>
+<h3 id="campAtac">Atac:-</h3>
+<button type="button" class="btn btn-primary" onclick="Carregar(10)">Carregar dades</button>
+<button type="button" class="btn btn-success" onclick="Sumar(10)">Sumar 10 punts</button>
+<button type="button" class="btn btn-danger" onclick="Restar(10)">Restar 10 punts</button>
+<button type="button" class="btn btn-success" onclick="Sumar(20)">Sumar 20 punts</button>
+</div>
+
+<div>
+    <h1>Calculadora</h1>
+    <input type="number" id="sumar1">
+    <input type="number" id="sumar2">
+    <button type="button" class="btn btn-primary" onclick="Restar2()">-</button>
+    <button type="button" class="btn btn-primary" onclick="Sumar2()">+</button>
+    <button type="button" class="btn btn-primary" onclick="Multip()">*</button>
+    <button type="button" class="btn btn-primary" onclick="Divid()">/</button>
+    <button type="button" class="btn btn-primary" onclick="Major()">Major</button>
+    <button type="button" class="btn btn-primary" onclick="Par()">Casella 1 par?</button>
+    <h2 id="resultat">Resultat</h2>
+
+</div>
+<div>
+    <h1>Llista</h1>
+    <input type="text" id="textLlista">
+    <button type="button" class="btn btn-primary" onclick="Afegir()">Afegir</button>
+</div>
+
+<p id="Llista"></p>
+
+</body>
+</html>

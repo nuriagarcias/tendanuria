@@ -1,0 +1,101 @@
+.productes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 25px;
+}
+/*graella peluixos*/
+
+body {
+    background-color: #F2F6F6;
+}
+/*fons*/
+
+.item {
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+/*cada cuadret de la graella*/
+
+.menu{
+    background-color: #17388E;
+    padding-top:200px;
+    padding-left: 35px;
+
+}
+/*columna blava menú*/
+
+h1 {
+    font-family:"Cantarell Extra Bold", sans-serif ;
+    color:#FFFFFF;
+    border: #276308;
+}
+/*títol tenda*/
+
+.general {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+/*estructura principal de la web*/
+
+.tenda {
+    display: grid;
+    margin-right: 50px
+}
+/*títol tenda i productes*/
+
+.destacat1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+/*producte1*/
+
+.destacat2 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+/*producte 11 i 12*/
+
+h2 {
+    text-align: left;
+    font-family: "Cantarell Extra Bold", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+/*preu i titol destacat*/
+
+h3 {
+    text-align: left;
+    font-family: "Cantarell Light", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*descripcions*/
+
+.destacat1:hover {
+    background-color: #A5BCD2;
+    color: white;
+}
+.destacat2:hover {
+    background-color: #A5BCD2;
+    color: white;
+}
+h4 {
+    text-align: left;
+    font-family: "Cantarell Light", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+/*títol no destacat*/
+
+a {
+    text-decoration: none;
+    color:white
+}
+/*link per a tenda 1 i 2*/
