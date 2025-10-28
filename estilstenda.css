@@ -6,6 +6,47 @@
 }
 /*graella peluixos*/
 
+.compraDestacat1 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+
+}
+/*columna por cistella i títol*/
+
+.compra {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: flex-start;
+}
+.descripcions {
+    display: grid;
+}
+
+botoCistellaDestacat1 {
+    background-color: #54A5E8;
+    color: white;
+    font-size:18px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    /*padding-right:13px;*/
+    /*padding-left:13px;*/
+}
+/*botó de la cistella del destacat 1*/
+
+botoCistella {
+    background-color: #54A5E8;
+    color: white;
+    font-size:18px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    /*padding-right:13px;*/
+    /*padding-left:13px;*/
+}
+/*botó de la cistella*/
+
 body {
     background-color: #F2F6F6;
 }
