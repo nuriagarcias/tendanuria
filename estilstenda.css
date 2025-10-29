@@ -14,6 +14,11 @@
 }
 /*columna por cistella i títol*/
 
+.compraDestacat23 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: flex-start;
+}
 .compra {
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -35,7 +40,13 @@ botoCistellaDestacat1 {
 }
 /*botó de la cistella del destacat 1*/
 
+botoCistellaDestacat1:hover {
+    background-color: white;
+    color: #54A5E8;
+}
+
 botoCistella {
+    align-items: flex-start;
     background-color: #54A5E8;
     color: white;
     font-size:18px;
@@ -46,6 +57,23 @@ botoCistella {
     /*padding-left:13px;*/
 }
 /*botó de la cistella*/
+
+botoCistellaDestacat23 {
+    background-color: #54A5E8;
+    color: white;
+    font-size:18px;
+    text-align: center;
+    padding: 7px;
+    font-family:"Cantarell Extra Bold", sans-serif ;
+    border-radius: 8px;
+    /*padding-right:13px;*/
+    /*padding-left:13px;*/
+}
+
+.botoCistellaDestacat23:hover {
+    background-color: white;
+    color: #54A5E8;
+}
 
 body {
     background-color: #F2F6F6;
