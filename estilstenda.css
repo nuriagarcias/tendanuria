@@ -70,7 +70,7 @@ botoCistellaDestacat23 {
     /*padding-left:13px;*/
 }
 
-.botoCistellaDestacat23:hover {
+botoCistellaDestacat23:hover {
     background-color: white;
     color: #54A5E8;
 }
@@ -94,9 +94,16 @@ body {
     background-color: #17388E;
     padding-top:200px;
     padding-left: 35px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-content: space-between;
 
 }
 /*columna blava menú*/
+
+.categories {
+    display: grid;
+}
 
 h1 {
     font-family:"Cantarell Extra Bold", sans-serif ;
