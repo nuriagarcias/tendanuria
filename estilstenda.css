@@ -153,6 +153,11 @@ h3 {
 }
 /*descripcions*/
 
+cistella {
+    text-align: left;
+    font-family: "Cantarell Extra Bold", sans-serif;
+    color: white
+}
 .destacat1:hover {
     background-color: #A5BCD2;
     color: white;

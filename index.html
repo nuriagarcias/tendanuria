@@ -6,6 +6,8 @@
     <title>Tenda Nuria</title>
     <link rel="stylesheet" href="estilstenda.css">
     <link rel="icon" type="imatge/png" href="imatges/icon3.png"/>
+    <script type="text/javascript" src="funcionstenda.js"></script>
+
 </head>
 
 <body>
@@ -23,7 +25,9 @@
 <!--            <area>-->
 <!--        </div>-->
         <div class="categories">
-            <h3 id="CampPreu">Preu de la compra: 0</h3>
+            <cistella id="comptadorProductes">Cistella buida</cistella>
+            <cistella id="cistella"></cistella>
+            <cistella id="CampPreu">Preu de la compra:</cistella>
         </div>
 
 
@@ -48,7 +52,8 @@
                             únicament avui! </h3>
                     </div>
                     <div class="descripcions">
-                        <botoCistellaDestacat1  type="button" class="btn btn-primary" style="margin: 6px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistellaDestacat1  type="button" class="btn btn-primary" onclick="Comprar('Puzzle 12000 peces', 45.95);Sumar(45.95)"
+                                                style="margin: 6px"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistellaDestacat1>
@@ -64,7 +69,7 @@
                         <h4>Puzzle moixos 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" onclick="Comprar('Puzzle moixos 1000 peces', 12.99);Sumar(12.99)" style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -80,7 +85,7 @@
                         <h4>Puzzle cans 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0" onclick="Comprar('Puzzle cans 1000 peces', 10.29);Sumar(10.29)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -96,7 +101,7 @@
                         <h4>Puzzle marí 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0" onclick="Comprar('Puzzle marí 1000 peces', 13.95);Sumar(13.95)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -112,7 +117,7 @@
                         <h4>Puzzle muntanyes 1500 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0" onclick="Comprar('Puzzle muntanyes 1500 peces', 15.43);Sumar(15.43)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -128,7 +133,7 @@
                         <h4>Puzzle castell 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0"  onclick="Comprar('Puzzle castell 1000 peces', 10.95);Sumar(10.95)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -144,7 +149,7 @@
                         <h4>Puzzle bosc 500 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0" onclick="Comprar('Puzzle bosc 500 peces', 6.45);Sumar(6.45)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -160,7 +165,7 @@
                         <h4>Puzzle paisatge 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0"  onclick="Comprar('Puzzle paisatge 1000 peces', 11.95);Sumar(11.95)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -176,7 +181,7 @@
                         <h4>Puzzle ciutat 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0"  onclick="Comprar('Puzzle ciutat 1000 peces', 12.99);Sumar(12.99)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -192,7 +197,7 @@
                         <h4>Puzzle Colosseu 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0" onclick="Comprar('Puzzle Colosseu 1000 peces', 10.95);Sumar(10.95)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -211,7 +216,7 @@
                     </div>
                     <div class="descripcions">
                         <botoCistellaDestacat23  type="button" class="btn btn-primary" style="margin: 2px"
-                                                 one-click="Sumar(quantitat)">Afegir a la cistella
+                                                 onclick="Comprar('Puzzle fubol 300 peces', 2.45);Sumar(2.45)">Afegir a la cistella
                         </botoCistellaDestacat23>
                     </div>
                 </div>
@@ -225,7 +230,7 @@
                         <h4>Puzzle Nova York 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0" onclick="Comprar('Puzzle Nova York 1000 peces', 10.40);Sumar(10.40)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -241,7 +246,7 @@
                         <h4>Puzzle Alicia 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0"  onclick="Comprar('Puzzle Alicia 1000 peces', 11.67);Sumar(11.67)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -257,7 +262,7 @@
                         <h4>Puzzle gent 1000 peces</h4>
                     </div>
                     <div class="descripcions">
-                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0px"  one-click="Sumar(quantitat)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                        <botoCistella  type="button" class="btn btn-primary" style="margin: 4px; margin-bottom: 0"  onclick="Comprar('Puzzle gent 1000 peces', 12.50);Sumar(12.50)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart-plus"    viewBox="0 0 16 16">
                             <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
                             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                         </svg></botoCistella>
@@ -276,7 +281,7 @@
                     </div>
                     <div class="descripcions">
                         <botoCistellaDestacat23  type="button" class="btn btn-primary" style="margin: 2px"
-                                                 one-click="Sumar(quantitat)">Afegir a la cistella
+                                                 onclick="Comprar('Puzzle infantil 300 peces', 9.84);Sumar(9.84)">Afegir a la cistella
                         </botoCistellaDestacat23>
                     </div>
                 </div>
@@ -290,5 +295,7 @@
     </div>
 
 </div>
+<div id="cistella"></div>
+<div id="comptadorProductes"></div>
 </body>
 </html>
