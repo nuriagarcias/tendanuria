@@ -43,6 +43,7 @@ botoCistellaDestacat1 {
 botoCistellaDestacat1:hover {
     background-color: white;
     color: #54A5E8;
+    cursor: pointer; /* canvia a la mà amb el dit al posar-lo damut*/
 }
 
 botoCistella {
@@ -73,6 +74,12 @@ botoCistellaDestacat23 {
 botoCistellaDestacat23:hover {
     background-color: white;
     color: #54A5E8;
+    cursor: pointer; /* canvia a la mà amb el dit al posar-lo damut*/
+}
+
+botoCistella:hover {
+    background-color: #2287DA ;
+    cursor: pointer; /* canvia a la mà amb el dit al posar-lo damut*/
 }
 
 body {
