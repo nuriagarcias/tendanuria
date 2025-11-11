@@ -163,7 +163,13 @@ h3 {
 cistella {
     text-align: left;
     font-family: "Cantarell Extra Bold", sans-serif;
-    color: white
+    color: white;
+    margin-right: 33px;
+    margin-bottom: 33px;
+    background: #458AF2;
+    border-radius: 10px;
+    padding: 10px;
+
 }
 .destacat1:hover {
     background-color: #A5BCD2;
