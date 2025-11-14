@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <!--    títol tenda-->
     <title>Tenda Nuria</title>
     <link rel="stylesheet" href="estilstenda.css">
     <link rel="icon" type="imatge/png" href="imatges/icon3.png"/>
+    <script type="text/javascript" src="funcionstenda.js"></script>
 </head>
+
 <body>
 <!--dos columnes principals-->
 <div class="general">
     <div class="menu">
-        <h1 style="margin-bottom: 40px"><a href="index.html">Puzzles</a></h1>
-        <h1 style="margin-bottom: 40px"><a href="tenda2.html">Peluixos</a></h1>
-        <h1 style="margin-bottom: 40px">Cuinetes</h1>
-        <h1 style="margin-bottom: 40px">Pepas</h1>
-        <h1 style="margin-bottom: 40px">Jocs de taula</h1>
+        <div class="categories">
+            <h1 style="margin-bottom: 40px"><a href="index.html">Puzzles</a></h1>
+            <h1 style="margin-bottom: 40px"><a href="tenda2.html">Peluixos</a></h1>
+            <h1 style="margin-bottom: 40px">Cuinetes</h1>
+            <h1 style="margin-bottom: 40px">Pepas</h1>
+            <h1 style="margin-bottom: 40px">Jocs de taula</h1>
+        </div>
+
+        <div class="categories">
+            <cistella style="font-size: 20px;" id="comptadorProductes">Cistella buida</cistella>
+            <cistella style="background-color:#458AF2; display:none; border-radius: 10px; padding:10px" id="cistella"></cistella>
+            <cistella id="CampPreu">Preu de la compra: 0.00€</cistella>
+        </div>
+
     </div>
     <!--columna amb titol i productes-->
     <div class="tenda">
@@ -28,83 +41,414 @@
                 <img src="imatges/peluix1.png" alt="imatge peluix" width="300px">
                 <h2 style="color:white;background-color: red; display:inline-block">-40%</h2>
                 <h2 style="color:red; text-align: left; margin-top: 5px; margin-bottom: 5px; font-size: 37px">67,65€</h2>
-                <h2 style="text-align: left; margin-top: 5px; margin-bottom: 5px; font-size: 37px">Tres peluixos de moix</h2>
-                <h3 style="margin-right:10px">Gegants moixos en oferta
-                    únicament avui! </h3>
+<!--                descripció i botó cistella-->
+                <div class="compraDestacat1">
+<!--                    descripció-->
+                    <div class="descripcions">
+                        <h2 style="text-align: left; margin-top: 5px; margin-bottom: 5px; font-size: 37px">Tres peluixos de moix</h2>
+                        <h3 style="margin-right:10px">Gegants moixos en oferta
+                            únicament avui! </h3>
+                    </div>
+<!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistellaDestacat1  type="button" class="btn btn-primary"
+                                                onclick="Comprar('Tres peluixos de moix', 67.65, 'imatges/peluix1.png');"
+                                                style="margin: 6px"><svg xmlns="http://www.w3.org/2000/svg" width="50"
+                                                                         height="50" fill="currentColor" class="bi bi-cart-plus"
+                                                                         viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                             0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistellaDestacat1>
+                    </div>
+                </div>
+
+
             </div>
+<!--                productes generals-->
             <div class="item">
                 <img src="imatges/peluix2.png" alt="imatge peluix" width="150px">
                 <h2>27,99€</h2>
-                <h4>Peluix dinosaure gris</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix dinosaure gris</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix dinosaure gris', 27.99, 'imatges/peluix2.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix3.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>23,29€</h2>
-                <h4>Peluix os</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix os</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix os', 23.29, 'imatges/peluix3.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix4.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>21,95€</h2>
-                <h4>Peluix conill</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix conill</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix conill', 21.95, 'imatges/peluix4.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img style="margin-bottom: 10px; margin-top: 10px" src="imatges/peluix5.png" alt="imatge peluix" width="150px" height="130px">
                 <h2>34,43€</h2>
-                <h4>Peluix lloro</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix lloro</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix lloro', 34.43, 'imatges/peluix5.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix6.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>28,95€</h2>
-                <h4>Peluix tortuga</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix tortuga</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix tortuga', 28.95, 'imatges/peluix6.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix7.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>32,45€</h2>
-                <h4>Peluix tauró balena</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix tauró balena</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix tauró balena', 32.45, 'imatges/peluix7.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix8.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>25,95€</h2>
-                <h4>Peluix capibara maduixa</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix capibara maduixa</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix capibara maduixa', 25.95, 'imatges/peluix8.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix9.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>19,99€</h2>
-                <h4>Peluix guineu</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix guineu</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix guineu', 19.99, 'imatges/peluix9.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix10.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>18,95€</h2>
-                <h4>Peluix gos salsitxa</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix gos salsitxa</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix gos salsitxa', 18.95, 'imatges/peluix10.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <!--            segon destacat posició 11-->
             <div class="item destacat2">
                 <img src="imatges/peluix11.png" alt="imatge peluix" width="150px" height="150px">
                 <h2 style="color:white;background-color: red; display:inline-block">-30%</h2>
                 <h2 style="color:red;margin-top:2px">15,45€</h2>
-                <h4>Oferta especial! Peluix Mofusand tauró</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compraDestacat23">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Oferta especial! Peluix Mofusand tauró</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistellaDestacat23  type="button" class="btn btn-primary" style="margin: 2px"
+                                                 onclick="Comprar('Peluix Mofusand tauró', 15.45, 'imatges/peluix11.png');">Afegir a la cistella
+                        </botoCistellaDestacat23>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix12.png" alt="imatge peluix" width="150px" height="150px">
-                <h2>31,40€</h2>
-                <h4>Peluix mantarratlla</h4>
+                <h2>31,41€</h2>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix mantarratlla</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix mantarratlla', 31.41, 'imatges/peluix12.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix13.png" alt="imatge peluix" width="150px" height="150px">
                 <h2>28,67€</h2>
-                <h4>Peluix pingüí</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix pingüí</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix pingüí', 28.67, 'imatges/peluix13.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <div class="item">
                 <img src="imatges/peluix14.png" alt="imatge peluix" width="150px" height="150px">
-                <h2>19,50€</h2>
-                <h4>Peluix avorrit</h4>
+                <h2>19,51€</h2>
+
+                <!--descripció i botó cistella-->
+                <div class="compra">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Peluix avorrit</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistella  type="button" class="btn btn-primary"
+                                       onclick="Comprar('Peluix avorrit', 19.51, 'imatges/peluix14.png');"
+                                       style="margin: 4px; margin-bottom: 0"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                  width="20" height="20" fill="currentColor"
+                                                                                  class="bi bi-cart-plus"    viewBox="0 0 16 16">
+                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2
+                            2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5
+                            0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                        </svg></botoCistella>
+                    </div>
+                </div>
+
             </div>
             <!--            tercer destacat posició 15-->
             <div class="item destacat2">
                 <img src="imatges/peluix15.png" alt="imatge peluix" width="150px" height="150px">
                 <h2 style="color:white;background-color: red; display:inline-block">-10%</h2>
                 <h2 style="color:red;margin-top:2px">33,84€</h2>
-                <h4>Oferta especial! Peluix rotllo de canyella</h4>
+
+                <!--descripció i botó cistella-->
+                <div class="compraDestacat23">
+
+                    <!--                    descripció-->
+                    <div class="descripcions">
+                        <h4>Oferta especial! Peluix rotllo de canyella</h4>
+                    </div>
+
+                    <!--                    botó cistella-->
+                    <div class="descripcions">
+                        <botoCistellaDestacat23  type="button" class="btn btn-primary" style="margin: 2px"
+                                                 onclick="Comprar('Peluix rotllo de canyella', 33.84, 'imatges/peluix15.png');">Afegir a la cistella
+                        </botoCistellaDestacat23>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -114,5 +458,9 @@
     </div>
 
 </div>
+
+    <div id="cistella"></div>
+    <div id="comptadorProductes"></div>
+
 </body>
 </html>

@@ -3,6 +3,7 @@ let nombreProductes = 0
 function Comprar(nom, preu, imatge){
     //Llegim el que s'ha desat al LocalStorage
     // nombreProductes = localStorage.getItem("totalProductes");
+    document.getElementById('cistella').style.display = 'block';
     document.getElementById('cistella').innerHTML += "<div><img src=\""+imatge+"\" width=\"90\" height=\"90\">" + nom  + "-" + preu + "€</div>"
     nombreProductes++
     if(nombreProductes > 1){
@@ -11,6 +12,7 @@ function Comprar(nom, preu, imatge){
     else{
         document.getElementById('comptadorProductes').innerText = "Cistella amb " + nombreProductes + " article"
     }
+    Sumar(preu)
 
     //Escrivim el que volem desar al LocalStorage
     // localStorage.setItem('totalProductes', nombreProductes)

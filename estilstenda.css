@@ -12,18 +12,22 @@
     align-items: center;
 
 }
-/*columna por cistella i títol*/
+/*espai de cistella i descripció de destacat 1*/
 
 .compraDestacat23 {
     display: grid;
     grid-template-columns: 3fr 2fr;
     align-items: flex-start;
 }
+/*espai de cistella i descripció de destacats 2 i 3*/
+
 .compra {
     display: grid;
     grid-template-columns: 4fr 1fr;
     align-items: flex-start;
 }
+/*espai de cistella i descripció*/
+
 .descripcions {
     display: grid;
 }
@@ -59,6 +63,11 @@ botoCistella {
 }
 /*botó de la cistella*/
 
+botoCistella:hover {
+    background-color: #2287DA ;
+    cursor: pointer; /* canvia a la mà amb el dit al posar-lo damut*/
+}
+
 botoCistellaDestacat23 {
     background-color: #54A5E8;
     color: white;
@@ -70,15 +79,11 @@ botoCistellaDestacat23 {
     /*padding-right:13px;*/
     /*padding-left:13px;*/
 }
+/*botó de la cistella dels destacats 2 i 3*/
 
 botoCistellaDestacat23:hover {
     background-color: white;
     color: #54A5E8;
-    cursor: pointer; /* canvia a la mà amb el dit al posar-lo damut*/
-}
-
-botoCistella:hover {
-    background-color: #2287DA ;
     cursor: pointer; /* canvia a la mà amb el dit al posar-lo damut*/
 }
 
@@ -104,13 +109,13 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr;
     align-content: space-between;
-
 }
 /*columna blava menú*/
 
 .categories {
     display: grid;
 }
+/*categories de la tenda*/
 
 h1 {
     font-family:"Cantarell Extra Bold", sans-serif ;
@@ -166,19 +171,21 @@ cistella {
     color: white;
     margin-right: 33px;
     margin-bottom: 33px;
-    background: #458AF2;
-    border-radius: 10px;
-    padding: 10px;
-
+    /*background: #458AF2;*/
+    /*border-radius: 10px;*/
+    /*padding: 10px;*/
 }
+
 .destacat1:hover {
     background-color: #A5BCD2;
     color: white;
 }
+
 .destacat2:hover {
     background-color: #A5BCD2;
     color: white;
 }
+
 h4 {
     text-align: left;
     font-family: "Cantarell Light", sans-serif;
